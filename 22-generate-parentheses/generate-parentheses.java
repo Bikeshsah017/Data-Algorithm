@@ -18,20 +18,12 @@ class Solution {
 
         // Add '('
         if (open < n) {
-            backtrack(result,
-                      current + "(",
-                      open + 1,
-                      close,
-                      n);
+            backtrack(result,current + "(",open + 1,close,n);
         }
 
         // Add ')'
         if (close < open) {
-            backtrack(result,
-                      current + ")",
-                      open,
-                      close + 1,
-                      n);
+            backtrack(result,current + ")",open,close + 1,n);
         }
     }
 }
